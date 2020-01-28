@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Analyze</title>
+</head>
+<body>
+    <div class="container"><h1 style="text-align: center;background-color: darkslategray;color:white;padding: 5px;">Your Analyzed text - {{purpose}}</h1></div>
+    <p>
+        <h3 style="color: crimson;text-align: center;">Given Text</h3><br> <pre style="margin: auto; text-align: center;width:40%;padding: 30px; border:1px solid black"><strong style="color:midnightblue;">{{intial}}</strong></pre>
+       
+    </p>
+    <p><h5 style="text-align: center;">Operation is performed in order if applied </h5>
+     <br> <p style="text-align: center;">Remove->Space Remove->Upper Case->New Line Remove->Char Count</p><br><hr>
+        <h4 style="color: green;text-align: center;">Result of selected operation shows below</h4><hr>
+    </div>
+        <div class="container">
+           <div class="row">
+                <div class="col-lg-6">
+                    <label><h5>Remove punctuation</h5></label><li><pre>{{removepun}}</pre></li><br>                    
+                </div>
+                <div class="col-lg-6">
+                    <label><h5>Space remove</h5></label><li>{{spaceremove}}</li><br>                   
+                </div>
+            </div>
+           <div class="row">
+                <div class="col-lg-6">
+                    <label><h5>Upper Case</h5></label><li>{{upperana}}</li><br>                  
+                </div>
+                <div class="col-lg-6">
+                    <label><h5>New Line remove </h5></label><li>{{newlineana}}</li><br>                 
+             </div>
+           </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <label><h5>Char count</h5></label><li>{{charana}}</li><br>               
+                </div>
+                                 
+            </div>
+                   </div>     
+      
+    </p>
+</body>
+</html>

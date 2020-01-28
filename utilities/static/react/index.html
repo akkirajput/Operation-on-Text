@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <body>
+            <form action="/analyze" method="POST">
+                {% csrf_token %}
+                <p>{{today}}</p>
+                <br>
+                <div class="container"><h1 style="text-align: center;background-color: darkslategray;color:white;padding: 5px;">Text Analyzer</h1></div>
+                <hr>
+             <div class="container"><textarea name="text" id="text" cols="155" rows="10" style="margin-top: 0px; margin-bottom: 0px; height: 204px;" spellcheck="false"></textarea><br><hr>
+            
+            <div class="custom-control custom-switch">
+                <input type="checkbox"  name='removepun' class="custom-control-input " id="customSwitch">
+                <label class="custom-control-label" for="customSwitch">Remove Punctuation</label>
+            </div>
+            <div class="custom-control custom-switch">
+                <input type="checkbox"   name='charcount' class="custom-control-input " id="charcount">
+                <label class="custom-control-label" for="charcount">Character Count</label>
+            </div>
+            <div class="custom-control custom-switch">
+                <input type="checkbox" name='spaceremove' class="custom-control-input " id="spaceremove">
+                <label class="custom-control-label" for="spaceremove">Space Remove</label>
+            </div>
+            <div class="custom-control custom-switch">
+                <input type="checkbox"  name='uppercase' class="custom-control-input " id="uppercase">
+                <label class="custom-control-label" for="uppercase">Upper Case</label>
+            </div>
+            <div class="custom-control custom-switch">
+                <input type="checkbox"  name='newline' class="custom-control-input " id="newline">
+                <label class="custom-control-label" for="newline">Remove new line</label>
+            </div>
+         
+                
+                <button type="submit" class="btn btn-dark">Submit</button ></div> 
+             
+                   
+            </form>
+        </body>
+    </head>
+</html>
